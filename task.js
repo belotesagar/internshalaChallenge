@@ -1,5 +1,3 @@
-console.log("hello world");
-
 var D = {
     '2020-01-01': 4, //wed
     '2020-01-02': 4, //Thu 
@@ -8,7 +6,7 @@ var D = {
     '2020-01-05': 2, //sun
     '2020-01-06': -6, //mon
     '2020-01-07': 2, //tue
-    '2020-01-08': -2 //wed
+    '2020-01-08': -2000000 //wed
 }
 var output = {
     'Mon': -6,
@@ -28,6 +26,7 @@ function solution(D, days) {
     var dictionary = {};
     var previousValue = 0;
     var inputDays = [];
+    var isValidDictionary = true;
     for (var x in D) {
 
         console.log("x:", x);
@@ -37,10 +36,35 @@ function solution(D, days) {
         var day = days[dayinObject];
         console.log("day:", day);
         inputDays.push(day);
+
     }
+
+    validateDictionary(D);
+
+    function validateDictionary(D) {
+
+        Object.entries(D).forEach(([key, val]) => {
+            console.log("key of D:", key);
+            console.log("val of D:", val);
+            var startDateLimit = new Date(0).getTime();; //JavaScript stores dates as number of milliseconds since January 01, 1970, 00:00:00 UTC (Universal Time Coordinated). 
+            console.log("val of startDateLimit:", startDateLimit);
+            var EndDateLimit = new Date("2100-01-01").getTime();
+            console.log("val of EndDateLimit:", EndDateLimit);
+            var currentDate = new Date(key).getTime();
+            console.log("val of currentDate:", currentDate);
+            try {
+                if ((currentDate < startDateLimit) || (currentDate > EndDateLimit)) throw "invalid key found in input cant proceed,please provide input in dictionary between 1970-01-01 to 2100-01-01";
+                if ((val < -1000000) || (val > 1000000)) throw "invalid value found in input cant proceed,please provide key input dictionary between -1000000 to 1000000";
+                isValidDictionary = false;
+            } catch (err) {
+                alert(err);
+            }
+        });
+    }
+
     console.log("inputDays:", inputDays);
 
-    if ((inputDays.includes("Mon") === true) && (inputDays.includes("Sun") === true)) {
+    if ((inputDays.includes("Mon") === true) && (inputDays.includes("Sun") === true) && (isValidDictionary === true)) {
 
         Object.entries(D).forEach(([key, val]) => {
             console.log("key:", key);
@@ -71,6 +95,12 @@ function solution(D, days) {
 
         });
     }
-    document.getElementById("demo").innerHTML = dictionary;
-    console.log("dictionary:", dictionary);
+    try {
+        if (inputDays.includes("Mon") !== true) throw "input dictionary will have at least Mon";
+        if (inputDays.includes("Sun") !== true) throw "input dictionary will have at least Sun";
+    } catch (err) {
+        alert(err);
+    }
+    // document.getElementById("demo").innerHTML = dictionary;
+    console.log("dictionary:", dictionary); //expected dictionary
 }
