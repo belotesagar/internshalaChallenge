@@ -102,5 +102,5 @@ function solution(D, days) {
         alert(err);
     }
     // document.getElementById("demo").innerHTML = dictionary;
-    console.log("dictionary:", dictionary); //expected dictionary
+    console.log("dictionary:", dictionary); //expected dictionary output
 }
