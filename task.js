@@ -29,7 +29,7 @@ function solution(D, days) {
     var previousValue = 0;
     var inputDays = [];
     for (var x in D) {
-        
+
         console.log("x:", x);
         var d = new Date(x);
         var dayinObject = d.getDay();
@@ -71,6 +71,6 @@ function solution(D, days) {
 
         });
     }
-
+    document.getElementById("demo").innerHTML = dictionary;
     console.log("dictionary:", dictionary);
 }
