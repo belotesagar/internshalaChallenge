@@ -1,3 +1,8 @@
+//Assignment submitted by Sagar B Belote.
+//email:sagarbelotes@gmail.com
+//contact number:8698928826
+//please look readme file because when i am trying to
+
 var D = {
     '2020-01-01': 4, //wed
     '2020-01-02': 4, //Thu 
@@ -6,7 +11,7 @@ var D = {
     '2020-01-05': 2, //sun
     '2020-01-06': -6, //mon
     '2020-01-07': 2, //tue
-    '2020-01-08': -2000000 //wed
+    '2020-01-08': -2 //wed
 }
 var output = {
     'Mon': -6,
