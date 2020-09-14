@@ -11,7 +11,7 @@ var D = {
     '2020-01-05': 2, //sun
     '2020-01-06': -6, //mon
     '2020-01-07': 2, //tue
-    '2020-01-08': -1000000 //wed
+    '2020-01-08': -2 //wed
 }
 var output = {
     'Mon': -6,
@@ -111,4 +111,9 @@ function solution(D, days) {
     }
     // document.getElementById("demo").innerHTML = dictionary;
     console.log("dictionary:", dictionary); //expected dictionary output
+    if (dictionary !== undefined) {
+        console.log("true");
+        for (var missingValue = 0; missingValue < days; missingValue++) {}
+
+    }
 }
