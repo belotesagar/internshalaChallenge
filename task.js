@@ -11,7 +11,7 @@ var D = {
     '2020-01-05': 2, //sun
     '2020-01-06': -6, //mon
     '2020-01-07': 2, //tue
-    '2020-01-08': -2 //wed
+    '2020-01-08': -1000000 //wed
 }
 var output = {
     'Mon': -6,
@@ -60,9 +60,12 @@ function solution(D, days) {
             try {
                 if ((currentDate < startDateLimit) || (currentDate > EndDateLimit)) throw "invalid key found in input cant proceed,please provide input in dictionary between 1970-01-01 to 2100-01-01";
                 if ((val < -1000000) || (val > 1000000)) throw "invalid value found in input cant proceed,please provide key input dictionary between -1000000 to 1000000";
-                isValidDictionary = false;
+                // else if (((val > -1000000) && (val < 1000000)) || ((currentDate < startDateLimit) && (currentDate < EndDateLimit))) {
+                //     isValidDictionary = true;
+                // }
             } catch (err) {
                 alert(err);
+                isValidDictionary = false;
             }
         });
     }
