@@ -1,10 +1,10 @@
 //Assignment submitted by Sagar B Belote.
 //email:sagarbelotes@gmail.com.
 //contact number:8698928826.
-//problem while understanding 3rd condition: when i am trying to code for add missing days with value vased on pre+next days value and then theirs mean is value of missing 
-//day that time i didnt get idea how you shown there a values because if i get idea you have taking mean of pre+next days value and taking mean of both but if we 
-//see in 3rd condition i found it is not logically correct.if i get to know how you are replacing thu=8 and fri=10 (this 2 are missing days in second input dictionary 
-//output).definitely i will write code for this condition too but i want a clear idea about it.
+//problem while understanding 3rd condition: when I am trying to code for add missing days with value based on pre+next days value and then theirs mean is the value of missing 
+//day that time I didn't get an idea of how you showed there a value because if I get an idea you have taking a mean of pre+next days value and the taking mean of both but if we 
+//see in 3rd condition I found it is not logically correct. if I get to know how you are replacing thu=8 and fri=10 (this 2 are missing days in the second input dictionary 
+//output).definitely I will write code for this condition too but I want a clear idea about it.
 
 //input dictionary 1:
 var D = {
