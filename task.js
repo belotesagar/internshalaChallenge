@@ -5,6 +5,7 @@
 //day that time I didn't get an idea of how you showed there a value because if I get an idea you have taking a mean of pre+next days value and the taking mean of both but if we 
 //see in 3rd condition I found it is not logically correct. if I get to know how you are replacing thu=8 and fri=10 (this 2 are missing days in the second input dictionary 
 //output).definitely I will write code for this condition too but I want a clear idea about it.
+//please see console.log if you watching output.in dictionary variable final output is stored.
 
 //input dictionary 1:
 var D = {
